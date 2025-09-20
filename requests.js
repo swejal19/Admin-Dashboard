@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const requestsTableBody = document.getElementById('requests-table-body');
 
     // Fetch dummy data
-    const response = await fetch('../data/requests.json');
+    const response = await fetch('requests.json');
     const requests = await response.json();
 
     const renderTable = (data) => {

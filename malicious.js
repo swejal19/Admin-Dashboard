@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const maliciousTableBody = document.getElementById('malicious-table-body');
 
     // Fetch dummy data
-    const response = await fetch('../data/malicious.json');
+    const response = await fetch('malicious.json');
     const malicious = await response.json();
 
     const renderTable = (data) => {

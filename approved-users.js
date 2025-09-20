@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const approvedUsersTableBody = document.getElementById('approved-users-table-body');
 
     // Fetch dummy data
-    const response = await fetch('../data/approved-users.json');
+    const response = await fetch('approved-users.json');
     const users = await response.json();
 
     const renderTable = (data) => {
