@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${log.email}</td>
-                <td>${log.relation}</td>
+                <td>${log.role}</td>
                 <td>${log.timestamp}</td>
                 <td>${log.activityType}</td>
                 <td class="status ${log.status.toLowerCase()}">${log.status}</td>

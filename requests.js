@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             row.innerHTML = `
                 <td>${req.name}</td>
                 <td>${req.email}</td>
-                <td>${req.relation}</td>
+                <td>${req.role}</td>
                 <td>${req.dateRequested}</td>
                 <td>
                     <button class="btn btn-success" data-id="${req.id}" data-action="approve">Approve</button>
