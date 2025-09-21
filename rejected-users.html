@@ -19,8 +19,8 @@
                 <nav class="sidebar-nav">
                     <ul>
                         <li><a href="dashboard.html"><svg data-feather="grid"></svg> Dashboard</a></li>
-                        <li><a href="approved-users.html" class="active"><svg data-feather="users"></svg> Approved Users</a></li>
-                        <li><a href="rejected-users.html"><svg data-feather="user-x"></svg> Rejected Users</a></li>
+                        <li><a href="approved-users.html"><svg data-feather="users"></svg> Approved Users</a></li>
+                        <li><a href="rejected-users.html" class="active"><svg data-feather="user-x"></svg> Rejected Users</a></li>
                         <li><a href="requests.html"><svg data-feather="list"></svg> Requests</a></li>
                         <li><a href="malicious.html"><svg data-feather="alert-triangle"></svg> Malicious Logs</a></li>
                         <li><a href="reports.html"><svg data-feather="bar-chart-2"></svg> Reports</a></li>
@@ -39,11 +39,11 @@
         <main class="main-content">
             <header class="header">
                 <div class="page-title">
-                    <h1>Approved Users</h1>
+                    <h1>Rejected Users</h1>
                 </div>
                 <div class="header-right">
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <input type="text" id="searchInput" placeholder="Search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </div>
                     <div class="header-icons">
@@ -53,30 +53,40 @@
                 </div>
             </header>
 
-            <section>
-                <div class="table-container">
-                    <table class="table dark-table">
+            <section class="rejected-users-table">
+                <div class="table-container dark-table">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
                                 <th>Status</th>
-                                <th id="sp-th">Actions</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="approved-users-table-body">
-                            <!-- Table rows will be dynamically added here by JavaScript -->
+                        <tbody id="rejected-users-table-body">
+                            <!-- Table rows will be dynamically populated here -->
                         </tbody>
                     </table>
                 </div>
+                <div id="pagination" class="pagination"></div>
             </section>
         </main>
     </div>
 
+    <!-- Custom Modal for Alerts -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalMessage"></h3>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="modalOkBtn">OK</button>
+            </div>
+        </div>
+    </div>
     <script>
         feather.replace();
     </script>
-    <script src="approved-users.js"></script>
+    <script src="rejected-users.js"></script>
 </body>
 </html>
