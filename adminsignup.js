@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Redirect to login page after a short delay
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = 'adminlogin.html';
         }, 2000);
     });
 });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warfare Dynamics - Info Collection</title>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="militarycss.css">
+</head>
+<body>
+
+    <div class="content-container">
+        <h1>Family & Verification</h1>
+        <p class="subtitle">Please provide details for your family members and any verification notes.</p>
+        
+        <form id="info-form">
+            <div id="family-member-container" class="form-section">
+                <!-- Family member cards will be added here -->
+            </div>
+            
+            <div class="button-group">
+                <button type="button" class="btn btn-add" id="add-another-btn">Add Another</button>
+                <button type="submit" class="btn btn-save">Save</button>
+            </div>
+        </form>
+        
+        <div id="summary-container" class="summary-table-container" style="display: none;">
+            <h2>Entered Data Summary</h2>
+            <div class="table-container">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Relation</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summary-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="militaryinfo.js"></script>
+</body>
+</html>
